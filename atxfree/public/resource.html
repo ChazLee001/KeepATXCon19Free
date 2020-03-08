@@ -7,9 +7,6 @@
   
     <!-- Site Properties -->
     <title>Attached - Semantic</title>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.3/jquery.csv.min.js"></script>
-
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
     <link href="../dist/components/reset.css" rel="stylesheet" type="text/css">
     <link href="../dist/components/site.css" rel="stylesheet" type="text/css">
@@ -37,63 +34,169 @@
   </head>
   <body>
   
-    <div class="six wide right floated column">
-      <div><img class="ui middle aligned massive centered bordered rounded image" src="./ATX_Con.png"></div>
-    </div>
+  <div class="ui container">
   
-    <h2 class="ui header">Resources</h2>
-    <table id="table" border="1">
-      <!-- <caption>CSV转JSON</caption> -->
-      <thead>
-          <tr>
-              <th>Phone Number</th>
-              <th>Address</th>
-              <th>Location</th>
-              <th>Hour</th>
-          </tr>
-      </thead>
-      <tbody>
-      </tbody>
-  </table>
-  <script>
-  Papa.parse('./CSVHealthcareResourcesv3.csv', {
-      download: true,
-      complete: function(results) {
-          var data = results.data, html;
-          for(var i = 1, _l = data.length-1; i < _l; i++) {
-              var item = data[i];
-              html += '<tr><td>'+item[0].substring(1)+'</td><td>'+item[1].substring(1)+'</td><td>'+item[2].substring(1)+'</td><td>'+item[3].substring(1)+'</td></tr>';
-          }
-          $('#table tbody').append(html);
-      }
-  });
-  </script>
+    <h2 class="ui header">Shelter Resources</h2>
     <div class="ui three column grid">
       <div class="column">
         <table class="top attached ui basic table">
           <thead>
-            <tr><th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
+            <tr><th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Hours</th>
+            <th>Description</th>
           </tr></thead>
           <tbody>
             <tr>
-              <td>Cell</td>
-              <td>Cell</td>
-              <td>Cell</td>
+              <td>Front Steps</td>
+              <td>500 E 7th St, Austin, TX 78701</td>
+              <td>(512) 305-4100</td>
+              <td>24 hours a day, 7 days a week</td>
+              <td>Front Steps’ programs are designed to address a spectrum of immediate and long-term needs, providing services ranging from emergency shelter and basic needs to case management and permanent housing.</td>
             </tr>
             <tr>
-              <td>Cell</td>
-              <td>Cell</td>
-              <td>Cell</td>
+              <td>Foundation for the Homeless</td>
+              <td>1611 Headway Circle, Building 2, Austin, TX 78754</td>
+              <td>(512) 453-6570</td>
+              <td>Mon-Fri: 9am-4:30pm</td>
+              <td>FFH utilizes multiple grants and donations to provide a safe and inviting housing focused shelter for families experiencing homelessness while working with these families to attain their own long-term housing.</td>
             </tr>
             <tr>
-              <td>Cell</td>
-              <td>Cell</td>
-              <td>Cell</td>
+              <td>The SAFE Children's Shelter</td>
+              <td>4800 Manor Road A, Austin, TX 78723</td>
+              <td>(512) 267-7233</td>
+              <td>Varies</td>
+              <td>The continuum of housing services we offer for children and young adults makes SAFE unique. This ongoing safety and stability allows the young people in our care a greater chance at long-term success.</td>
+            <tr>
+              <td>Casa Marianella</td>
+              <td>821 Gunter St, Austin, TX 78702</td>
+              <td>(512) 385-5571</td>
+              <td>Mon-Fri</td>
+              <td>Casa Marianella is an emergency homeless shelter that has served recently-arrived men and women immigrants, asylum seekers, and asylees since 1986 in East Austin. Casa Marianella’s Adult House has 35 spaces for single men and women in need. The length of stay ranges from a few days to a few months.</td>
+            </tr>
+            <tr>
+              <td>Mission Possible Austin</td>
+              <td>1190 Chicon St, Austin, TX 78702</td>
+              <td>(512) 494-0953</td>
+              <td>Mon:10am-3pm          Tues:10am-2pm          Wed:11am-12pm              Thurs: 10am-3pm           Fri:10am-2pm              Sun:11am-12:30pm</td>
+              <td>Our Hesed homes are “short-term intervention” homes used for families and women in crisis. These homes are occupied full-time by Christ followers living out this radical (Hesed) grace. The Christ followers will act as overseers and caretakers for the families staying in the homes.</td>
+            </tr>
+            <tr>
+              <td>Lifeworks Austin</td>
+              <td>3700 S 1st St, Austin, TX 78704</td>
+              <td>(512) 735-2400</td>
+              <td>Mon-Thurs: 8am-8pm          Fri: 8:30am-5pm          Sat: 9am-1pm</td>
+              <td>LifeWorks Housing Division offers a pathway from life on the streets to self-sufficiency for runaway and homeless youth, young parents, and youth who are aging out of the foster care system. LifeWorks housing continuum is the most comprehensive program in our community. It spans from a nationally recognized Street Outreach program and intense case management to our affordable housing complex.</td>
+            </tr>
+            <tr>
+              <td>Caritas of Austin</td>
+              <td>611 Neches Street, Austin, TX 78701</td>
+              <td>(512) 479-4610</td>
+              <td>Varies</td>
+              <td>We believe that building wellbeing begins with home. Our first priority in working with people is housing because it’s nearly impossible to regain stability without it. Our Housing programs serve people experiencing homelessness, and we prioritize the most vulnerable people for services.</td>
+            </tr>
+            <tr>
+              <td>The Downtown Shelter and Social Service Center (The Salvation Army)</td>
+              <td>501 E 8th St, Austin, TX 78701</td>
+              <td>(512) 476-1111</td>
+              <td>Mon-Fri: 9am-4pm</td>
+              <td>When you need a roof over your head for the night, The Salvation Army emergency shelters are here to help. Hundreds of people sleep safely every night in the Austin area because of these programs.</td>
+            </tr>
+            <tr>
+              <td>Austin Shelter for Women and Children (The Salvation Army)</td>
+              <td>4523 Tannehill Lane, Austin, TX 78721</td>
+              <td>(512) 933-0600</td>
+              <td></td>
+              <td>Only women and children (boys up to the age of 17) Open everyday 90-day stay period (transitional) Have kitchen services, serve breakfast, lunch, and dinner Mail services available once you are a resident Case managers available to help residents</td>
             </tr>
           </tbody>
         </table>
+        <br>
+        </br>
+    <h2 class="ui header">Healthcare Resources</h2>
+    <div class="ui three column grid">
+      <div class="column">
+        <table class="top attached ui basic table">
+          <thead>
+            <tr><th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Hours</th>
+            <th>Description</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td>El Buen Samaritano</td>
+              <td>7000 Woodhue Dr., Austin, TX 78745</td>
+              <td>(512) 439-0733</td>
+              <td>Mon-Thurs: 7am-7pm Friday: 7am-5pm</td>
+              <td>El Buen prioritizes health screenings and preventive exams, as they can be very beneficial for our clients who would otherwise not have access to these services.</td>
+            </tr>
+            <tr>
+              <td>C.D. Doyle Free Healthcare Clinic</td>
+              <td>304 E. 7th St., Austin, TX 78701</td>
+              <td>(512) 610-3559</td>
+              <td>Sundays</td>
+              <td>The medical services we provide include blood pressure checks, glucose checks, physical exams, prescriptions, laboratory services, urinalysis, vital signs monitoring and urgent care. We also offer referrals for specialty services. We offer counseling, wellness education on topics including first aid, nutrition, hepatitis, diabetes management, drug and alcohol addiction, smoking cessation, blood pressure surveillance, eye disease and preventative care.</td>
+            </tr>
+            <tr>
+              <td>Sunrise Homeless Navigation Center</td>
+              <td>4430 Manchaca Rd., Austin, TX 78745</td>
+              <td>(512) 444-4673</td>
+              <td>Varies</td>
+              <td>Showers (Wednesdays & Sundays)
+Free Clinic (Thursdays)
+MAP Signups (Thursdays)
+VA Consultations (Wednesdays)
+SOAR Assistance with Social Security Disability (Thursdays/Fridays)
+Integral Care Consultations (Mondays & Thursdays)
+STD Testing (as needed)
+Drug & Alcohol Treatment Referrals (as needed)</td>
+            <tr>
+              <td>People's Community Clinic</td>
+              <td>2909 N Interstate Hwy 35, Austin, TX 78722</td>
+              <td>(512) 478-4939</td>
+              <td>Mon-Thurs: 8am-8pm</td>
+              <td>The mission of People’s Community Clinic is to improve the health of medically underserved and uninsured Central Texans by providing high quality, affordable health care with dignity and respect.</td>
+            </tr>
+            <tr>
+              <td>Front Steps</td>
+              <td>500 E. 7th St., Austin, TX 78701</td>
+              <td>(512) 978-9920</td>
+              <td>Mon-Fri: 7:30am-11:30am and 12:30pm-4:30pm</td>
+              <td>Services at the ARCH are reserved for patients experiencing homelessness. The clinic is located INSIDE the ARCH Shelter.</td>
+            </tr>
+            <tr>
+              <td>Volunteer Healthcare Clinic</td>
+              <td>4215 Medical Parkway, Austin, TX 78756</td>
+              <td>(512) 459-6002</td>
+              <td>Tues and Thurs: 5pm-9pm</td>
+              <td>Our mission is to improve the health of the uninsured and the working poor by providing access to high quality health care and prevention education..</td>
+            </tr>
+            <tr>
+              <td>Salvation Army Homeless Clinic</td>
+              <td>501 E. 8th St., Austin TX 78701</td>
+              <td></td>
+              <td></td>
+              <td>We offer services for the Homeless and Underprivileged including Behavioral Health, Dental Services, Mental Health, Pharmacy, Primary Health Care, Social Services, and STDs.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br>
+        </br>
+
+        <h2 class="ui header">Other Resources</h2>
+        <a href="https://www.auntbertha.com/">Aunt Bertha</a>
+        Search for free or reduced-cost services like medical care, food, job
+     training, and more.
+        <br>
+        </br>
+        <a href="https://www.211texas.org/">2-1-1 Texas</a>
+        Committed to helping Texas citizens connect with the services they need.
+
+        <!--
         <table class="attached ui table">
           <tbody>
             <tr>
@@ -339,9 +442,11 @@
   </div>
   
   <div class="ui text container">
-  
+
+    -->
     <!-- <div class="ui section divider"></div> -->
-  
+    
+    <!--
     <div class="ui top attached three item inverted menu">
       <a class="item">Item</a>
       <a class="item">Item</a>
@@ -378,7 +483,7 @@
   
   </div>
   
+  -->
   
   
-
   </body></html>
