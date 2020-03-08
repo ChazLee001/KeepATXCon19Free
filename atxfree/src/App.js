@@ -1,25 +1,28 @@
 import React from 'react';
 import './App.css';
-import imgURL from './city-of-austin-skyline.jpg';
+import imgURL from "./ATX_Con.png";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={imgURL} className="Austin-BK" alt="Austin-BK" />
-        <p>
-          Goal to provide resources and FAQ for COVID19
-        </p>
-        <a
-          className="App-link"
-          href="http://www.austintexas.gov/COVID19"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Go To CDC
-        </a>
-      </header>
-    
+      {/* <header className="App-header">
+        
+        <div class="ui inverted vertical masthead center aligned segment">
+  
+        <div class="ui container">
+          <div class="ui large secondary inverted pointing menu">
+            <a class="toc item">
+              <i class="sidebar icon"></i>
+            </a>
+            <a class="active item" href="./resource.html">Resource</a>
+            <a class="item" href="./faq.html">FAQ</a>
+          </div>
+        </div>
+        <img class="ui middle aligned massive centered bordered rounded image" src="./ATX_Con.png"></img>
+        <div class="ui huge primary button">Get Started <i class="right arrow icon"></i>
+        </div>
+        </div>
+      </header> */}
     </div>
   );
 }
